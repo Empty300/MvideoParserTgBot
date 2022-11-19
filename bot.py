@@ -114,7 +114,7 @@ def with_one(message):
     del_bot_msgs(bot_idmsgs_list, message.chat.id)
     if message.text.capitalize() in categories.all_categories.keys():
         categoryId = categories.all_categories[message.text.capitalize()]
-        six_msg = bot.send_message(message.chat.id, f"Окей, начинаю парсить. Это может занять некоторое время",
+        six_msg = bot.send_message(message.chat.id, f"Окей, начинаю парсить Это может занять некоторое время",
                                    reply_markup=markup_b)
         bot_idmsgs_list.append(six_msg.id)
         id_list = get_id(categoryId)
